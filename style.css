@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 250px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid silver;
+    border-radius: 12px;
+    background-image: url('images/wallpaper.jpg');
+    background-position: center;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 7px 15px 0 rgba(0, 0, 0, 0.20);
+}
+#top_row{
+    display: flex;
+    width: 100%;
+    height: 26px;
+    align-items: center;
+}
+#top_row #icon{
+    color: white;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+#top_row #icon i, p{
+    padding-left: 4px;
+}
+#battery{
+    font-size: 15.5px;
+    margin-top: -1px;
+}
+#signal{
+    font-size: 9.5px;
+}
+#simName{
+    font-size: 11px;
+    font-weight: 500;
+}
+#camera{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: black;
+    border: 2px solid darkgray;
+    margin: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin-left: 112px;
+    margin-top: 12px;
+}
+#time_div{
+    width: 90%;
+    height: 100px;
+    font-size: 35px;
+    font-weight: 300;
+    color: white;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#hours, #minutes{
+    z-index: 1;
+}
+#time_div #seconds{
+    color: orange;
+    text-align: center;
+    font-size: 90px;
+    opacity: 30%;
+    position: absolute;
+}
+#date_div{
+    width: 80%;
+    height: 20px;
+    color: white;
+    display: flex;
+    margin-top: -10px;
+    align-items: center;
+    justify-content: center;
+}
+#date_div p{
+    padding-left: 5px;
+}
+          /* Music Player */
+
+#musicPlayer{
+    width: 100%;
+    height: 55px;
+    background: #252525;
+    margin-top: 35px;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: .3px solid whitesmoke;
+}
+#song_img{
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: white;
+    overflow: hidden;
+    object-fit: cover;
+    position: center;
+    margin-left: 2px;
+}
+#song_img img{
+    width: 40px;
+}
+.anime{
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#song_title{
+    position: relative;
+    display: flex;
+    width: 105px;
+    height: 32px;
+    margin-left: -5px;
+    overflow: auto;
+    align-items: center; 
+}
+#song_title #title{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+    width: max-content;
+}
+#song_title #gradient{
+    width: 40px;
+    height: 32px;
+    margin-left: 65px;
+    background-image: linear-gradient(to left, #252525, transparent);
+    position: fixed;
+}
+#controls{
+    display: flex;
+    width: 75px;
+    height: 25px;
+    margin-left: -5px;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+#controls button{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+    z-index: 10;
+    width: 20px;
+    height: 30px;    
+    cursor: pointer;
+}
+#notification{
+    width: 100%;
+    height: 25px;
+    background: black;
+    display: flex;
+    align-items: center;
+}
+#notification p{
+    color: white;
+    font-size: 11px;
+    padding-left: 8px;
+}
+#locked{
+    color: lightblue;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 50px;
+    transform: all ease 2s;
+    display: none;
+}
+#fingerprint{
+    color: whitesmoke;
+    font-size: 40px;
+    margin-top: 50px;
+}
