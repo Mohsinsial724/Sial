@@ -145,6 +145,9 @@ body{
     overflow: auto;
     align-items: center; 
 }
+::-webkit-scrollbar {
+    display: none;
+}
 #song_title #title{
     position: absolute;
     color: white;
